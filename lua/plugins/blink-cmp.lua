@@ -1,15 +1,20 @@
 return {
-  "saghen/blink.cmp",
-  build = "cargo build --release",
-  dependences = {
-    "rafamadriz/friendly-snippets",
-    {
-      "saghen/blink.compat",
-      opts = {}
-    }
-  },
+  'saghen/blink.cmp',
   event = "InsertEnter",
+  dependencies = {
+    "rafamadriz/friendly-snippets",
+    "L3MON4D3/LuaSnip",
+  },
   opts = {
+    snippets = {
+      expand = function(snippet)
+        require('luasnip.loaders.from_vscode').lazy_load()
+        require('luasnip.loaders.from_vscode').lazy_load({
+          paths = '~/.config/nvim/snippets',
+        })
+        require('luasnip').lsp_expand(snippet)
+      end
+    },
     keymap = { preset = 'super-tab' },
     appearance = {
       nerd_font_variant = 'normal'
