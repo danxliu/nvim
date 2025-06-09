@@ -17,7 +17,7 @@ return {
             if buffer.diagnostics.warnings ~= 0 then
               return get_hex('DiagnosticWarn', 'fg')
             end
-            return get_hex("PmenuSel", "bg")
+            return get_hex("Normal", "fg")
           end
           return "NONE"
         end,
