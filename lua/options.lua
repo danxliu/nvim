@@ -1,20 +1,27 @@
-vim.opt.clipboard = "unnamedplus"
-vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-vim.opt.mouse = 'a'
+-- General Options
+vim.o.mouse = 'a'
+vim.o.completeopt = "menuone,noinsert,noselect"
+vim.o.swapfile = false
 
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
+-- Visual Options
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.scrolloff = 10
+vim.o.sidescrolloff = 8
+vim.o.wrap = false
+vim.o.signcolumn = "yes"
+vim.o.showmode = false
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.numberwidth = 4
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-vim.opt.showmode = false
+-- Search Options
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+-- Indentation Options
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
+vim.o.smartindent = true
+vim.o.autoindent = true
 
-vim.api.nvim_set_option('wrap', true)
+vim.g.mapleader = " "

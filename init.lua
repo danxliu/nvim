@@ -1,3 +1,4 @@
 require("options")
-require("keymaps")
-require("loader")
+require("plugins")
+require("keybinds")
+
